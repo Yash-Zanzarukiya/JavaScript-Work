@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        body{
+            background-color: #212121;
+            color: white;
+        }
+        .container{
+            display: flex;
+            width: fit-content;
+        }
+        .boxes{
+            width: 100px;
+            height: 100px;
+            border: 3px solid white;
+            text-align: center;
+            align-items: center;
+            margin: 0px 10px;
+        }
+        #red{
+            background-color: red;
+        }
+        #blue{
+            background-color: blue;
+        }
+        #green{
+            background-color: #308D46;
+        }
+        #grey{
+            background-color: grey;
+        }
+    
+    </style>
+    <title>Background Changer</title>
+</head>
+<body>
+    <h1>Background Changer</h1>
+    <div class="container">
+        <span class="boxes" id="red"></span>
+        <span class="boxes" id="blue"></span>
+        <span class="boxes" id="green"></span>
+        <span class="boxes" id="grey"></span>
+    </div>
+    <h1 class="discription">Click Inside the Boxes To change Background Color</h1>
+    <script src="app.js"></script>
+</body>
+</html>

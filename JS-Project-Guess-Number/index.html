@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number-Guessing-Game</title>
+    <style>
+        body {
+            background-color: #212121;
+            color: #FFFFF7;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        #submit,.btn {
+            display: block;
+            margin: 30px auto;
+            height: 35px;
+            background-color: black;
+            border: 2px solid #FFFFF7 ;
+            color: #FFFFF7;
+        }
+        .btn{
+            color: green;
+            height: fit-content;
+            padding: 9px;
+        }
+        .info{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="display: flex; align-items: center; justify-content: center;flex-direction: column; height: 100vh;">
+
+        <div class="container">
+            <h1 >Number-Guessing-Game</h1>
+
+            <form>
+                <p><label for="userInput">Guess the Number: </label><input type="text" id="userInput"></p>
+
+                <input type="submit" class="btn" id="submit" value="Submit Guess">
+            </form>
+
+            <div class="info">
+            <p>Previous Guesses : <span id="previous">[ ]</span></p>
+            <p>Guess Remaining : <span id="remain">10</span></p>
+            <h3 class="messageBox"></h3>
+            </div>
+        </div>
+
+    </div>
+    <script src="/JS-Project-Guess-Number/app.js"></script>
+</body>
+
+</html>
