@@ -1,3 +1,4 @@
 # JavaScript-Work
 Hello there!!!!
-It is My JavaScript Practice Works done throught My Learning
+<br>
+It is My JavaScript Practice Works done through My Learning
