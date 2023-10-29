@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Call</title>
+</head>
+<body style="background-color: #212121; color: #30ab30;">
+    <h1>Handling API Call</h1>
+    <div class="container">
+        
+    </div>
+    <script>
+        const cont = document.querySelector('.container')
+        reqURL= 'https://api.github.com/users/hiteshchoudhary'
+        const  xrh = new XMLHttpRequest();
+        xrh.open('GET',reqURL)
+        xrh.send()
+        xrh.onreadystatechange = function (){
+            console.log(xrh.readyState);
+            if(xrh.readyState===4){
+                const data = JSON.parse(this.responseText)
+                cont.innerHTML+=`<Img src="${data.avatar_url}"></Img>`
+                cont.innerHTML+=data.followers
+            }
+        }
+        
+    </script>
+</body>
+</html>

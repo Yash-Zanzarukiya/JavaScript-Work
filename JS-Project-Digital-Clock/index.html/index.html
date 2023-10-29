@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .clock {
+            width: fit-content;
+            background-color: #212121;
+            padding: 10px 15px;
+            border: 3px solid white;
+            border-radius: 3px;
+            font-weight: bolder;
+            color: #308D46;
+            font-size: 40px;
+        }
+
+        body {
+            background-color: #212121;
+            color: #308D46;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+        }
+
+    </style>
+    <title>Digital Clock</title>
+</head>
+
+<body>
+    <div class="container">
+        <h3>Your local time</h3>
+        <span class="clock"></span>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
