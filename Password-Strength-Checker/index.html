@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Strength Checker</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        body {
+            color: #212121;
+            font-size: 1.7rem;
+        }
+
+        .container {
+            width: 35%;
+            height: 35%;
+            background: linear-gradient(to right, #6d6027, #d3cbb8);
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #password {
+            margin: 12px 0px;
+            width: 350px;
+            padding: 8px;
+            border: 2px solid #212121b5;
+            border-radius: 4px;
+        }
+
+        p {
+            font-size: 1.25rem;
+            font-weight: bolder;
+        }
+        
+        label{
+            font-weight: bolder;
+            font-size: 1.8rem;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        button {
+            width: fit-content;
+            padding: 12px;
+            margin-top: 20px;
+            cursor: pointer;
+            color: rgb(0, 0, 0);
+            background-color: #ff1212;
+            font-weight: bolder;
+            font-size: 1rem;
+            border: 3px solid #212121;
+            border-radius: 8px;
+        }
+
+        button:hover{
+            background-color:#fd2c2cd7;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="height: 100vh; display:flex;align-items: center;justify-content: center; background-color: #212121;">
+
+        <div class="container">
+
+            <Label for="password">Create Your Password</Label>
+            <input type="password" id="password" >
+            <p class="message"></p>
+
+            <button type="button" id="check-button">Check Password</button>
+        </div>
+    </div>
+    <script src="/Password-Strength-Checker/Script.js"></script>
+</body>
+
+</html>
