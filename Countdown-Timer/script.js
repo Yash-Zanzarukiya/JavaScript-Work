@@ -21,10 +21,4 @@ seconds.innerHTML = second;
 
 }
 
-updateTime()
-
-setInterval(updateTime,1000);
-// days.appendChild(document.createTextNode(day));
-// hours.appendChild(document.createTextNode(hour));
-// minutes.appendChild(document.createTextNode(minute));
-// seconds.appendChild(document.createTextNode(second));
+let upd_tm = setInterval(updateTime,1000);
