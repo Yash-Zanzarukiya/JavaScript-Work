@@ -5,6 +5,8 @@ let seconds = document.getElementById('seconds')
 
 let eventDate = new Date('30 Dec 2023 10:45');
 
+let tout = (eventDate - Date.now());
+
 function updateTime(){
 
 let diff = (eventDate - Date.now()) / 1000;
@@ -22,3 +24,8 @@ seconds.innerHTML = second;
 }
 
 let upd_tm = setInterval(updateTime,1000);
+
+setTimeout( ()=>(
+    clearInterval(upd_tm)
+
+),tout);
