@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+    <style>
+
+        *{
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #212121;
+            color: #f7f7f7;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        h1{
+            font-size: 2.8rem;
+        }
+        span{
+            display: inline-block;
+            color: #212121;
+            background-color: white;
+            width: 90px;
+            height: 90px;
+            padding: 15px;
+            font-size: 3rem;
+            border-radius: 3px;
+            text-align: center;
+            font-weight: bolder;
+            margin-bottom: 10px;
+        }
+        
+        .timer{
+            display: flex;
+        }
+        
+        .col{
+            margin: 50px;
+            text-align: center;
+        }
+        
+        label{
+            font-size: 2rem;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Finally wait is Over!!! We are Coming On...</h1>
+        <h1 style="color: #ff4444;">30 Dec 2023 Wed 10:45 PM</h1>
+        <div class="timer">
+            <div class="col">
+                <span id="days"></span>
+                <br>
+                <label for="days">Days</label>
+            </div>
+            <div class="col">
+                <span id="hours"></span>
+                <br>
+                <label for="hours">Hours</label>
+            </div>
+            
+            <div class="col">
+                <span id="minutes"></span>
+                <br>
+                <label for="minutes">Minutes</label>
+                
+            </div>
+            
+            <div class="col">
+                <span id="seconds"></span>
+                <br>
+                <label for="seconds">Seconds</label>
+
+            </div>
+        </div>
+    </div>
+    <script src="/Countdown-Timer/script.js"></script>
+</body>
+
+</html>
