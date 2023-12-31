@@ -5,64 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Countdown Timer</title>
-    <style>
-
-        *{
-            box-sizing: border-box;
-        }
-        body {
-            background-color: #212121;
-            background-repeat: no-repeat;
-            background-size: cover;
-            color: #f7f7f7;
-        }
-        
-        .container {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        h1{
-            font-size: 2.8rem;
-        }
-        span{
-            display: inline-block;
-            color: #212121;
-            background-color: white;
-            width: 90px;
-            height: 90px;
-            padding: 15px;
-            font-size: 3rem;
-            border-radius: 3px;
-            text-align: center;
-            font-weight: bolder;
-            margin-bottom: 10px;
-        }
-        
-        .timer{
-            display: flex;
-        }
-        
-        .col{
-            margin: 50px;
-            text-align: center;
-        }
-        
-        label{
-            font-size: 2rem;
-        }
-
-    </style>
+    <link rel="stylesheet" href="/Countdown-Timer/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Wellfleet&display=swap" rel="stylesheet">
 </head>
 
 <body>
+
     <div class="container">
-        <h1>Finally wait is Over!!! We are Coming On...</h1>
-        <h1 style="color: #ff4444;">30 Dec 2023 Wed 10:45 PM</h1>
-        <div class="timer">
+
+        <h1 style="color: #FF9933; font-size: 3rem;">Prepare Your Chants and Devotions📿</h1>
+        <h1> Shree Ramchandraji Descends To Give His Transcendental Blessings
+            on -</h1>
+        <p>
+            22 Jan 2024 Mon 11:00 AM - A day of divine blessings</p>
+        <div class="timer celebrate-animation">
             <div class="col">
                 <span id="days"></span>
                 <br>
@@ -73,14 +31,14 @@
                 <br>
                 <label for="hours">Hours</label>
             </div>
-            
+
             <div class="col">
                 <span id="minutes"></span>
                 <br>
                 <label for="minutes">Minutes</label>
-                
+
             </div>
-            
+
             <div class="col">
                 <span id="seconds"></span>
                 <br>
@@ -88,8 +46,80 @@
 
             </div>
         </div>
+        <h1>...Till We Shower Shree Ram with Flowers🌸🏵️🌺</h1>
+        <h1 style="color: #FF9933;">Brace Yourself for a Devine Celebration Like No Other!!! 🎉</h1>
+
+        <div class="confetti">
+            <div class="confetti-piece"></div>
+            <div class="confetti-piece"></div>
+            <div class="confetti-piece"></div>
+            <div class="confetti-piece"></div>
+            <div class="confetti-piece"></div>
+            <div class="confetti-piece"></div>
+            <div class="confetti-piece"></div>
+            <div class="confetti-piece"></div>
+            <div class="confetti-piece"></div>
+            <div class="confetti-piece"></div>
+            <div class="confetti-piece"></div>
+            <div class="confetti-piece"></div>
+            <div class="confetti-piece"></div>
+        </div>
+
     </div>
-    <script src="/Countdown-Timer/script.js"></script>
+
+    <script >
+
+        let days = document.getElementById('days');
+        let hours = document.getElementById('hours')
+        let minutes = document.getElementById('minutes')
+        let seconds = document.getElementById('seconds')
+
+        let eventDate = new Date('22 Jan 2024 11:00');
+
+        let tout = (eventDate - Date.now());
+
+        function updateTime() {
+
+            let diff = (eventDate - Date.now()) / 1000;
+
+            let day = Math.floor(diff / (60 * 60 * 24));
+            let hour = Math.floor(diff / 3600) % 24;
+            let minute = Math.floor(diff / 60) % 60;
+            let second = Math.floor(diff % 60);
+
+            days.innerHTML = day;
+            hours.innerHTML = hour;
+            minutes.innerHTML = minute;
+            seconds.innerHTML = second;
+
+        }
+
+        let upd_tm = setInterval(updateTime, 1000);
+
+        setTimeout(() => (
+            clearInterval(upd_tm)
+        ), tout);
+
+
+        const numConfetti = 100;
+        const confettiContainer = document.querySelector('.confetti');
+
+        let confettiPieces = document.querySelectorAll('.confetti-piece');
+        confettiPieces.forEach((piece) => {
+            piece.style.top = Math.random() * 100 + '%';
+        });
+
+        function createConfettiPiece() {
+            const piece = document.createElement('div');
+            piece.className = 'confetti-piece';
+            return piece;
+        }
+
+        for (let i = 0; i < numConfetti; i++) {
+            confettiContainer.appendChild(createConfettiPiece());
+        }
+        
+    </script>
 </body>
 
 </html>
